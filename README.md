@@ -38,7 +38,7 @@ Every container has unique name in Docker.Docker provide the facility to connect
   docker run -dit --name os1 --link os2 ubuntu:14.04
   ```
 **container os1 is link to container os2**
-Inbehine name linking is also use IP of both container, If IP change then both container can't be connect togethor by it's name.
+Inbehind name linking is also use IP of both container for connection, If IP change then both container can't be connect togethor by it's name.
   ```bash
   docker network ls
   ```
@@ -58,5 +58,4 @@ Again launch container
 ```bash
 docker run -dit –name -network lwnet mywp -p 8080:80 wordpress:latest
 ```
-
-
+Now if we restart the container with different ip then also containers are connected.
